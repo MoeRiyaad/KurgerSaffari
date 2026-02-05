@@ -1259,58 +1259,64 @@
             <p>Tell us about the safari experience you’re looking for — whether it’s a family adventure, a luxury lodge stay, or a photography-focused tour.</p>
           </div>
 
-          <form action="https://formsubmit.co/543d9a3c5920b48f91375de32c3605ed" method="POST" class="php-email-form contact-form">
-		  <input type="hidden" name="_next" value="https://moeriyaad.github.io/KurgerSaffari/?success#contact">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-field">
-                  <input type="text" name="name" class="form-input" id="userName" placeholder="Your Name" required="">
-                  <label for="userName" class="field-label">Name</label>
-                </div>
-              </div>
+<form action="https://formsubmit.co/543d9a3c5920b48f91375de32c3605ed" method="POST" class="php-email-form contact-form">
 
-              <div class="col-md-6">
-                <div class="form-field">
-                  <input type="email" class="form-input" name="email" id="userEmail" placeholder="Your Email" required="">
-                  <label for="userEmail" class="field-label">Email</label>
-                </div>
-              </div>
-            </div>
+  <!-- Redirect back to page with success flag -->
+  <input type="hidden" name="_next" value="https://moeriyaad.github.io/KurgerSaffari/?success#contact">
+  <!-- Honeypot + Captcha -->
+  <input type="text" name="_honey" style="display:none">
+  <input type="hidden" name="_captcha" value="false">
 
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-field">
-                  <input type="tel" class="form-input" name="phone" id="userPhone" placeholder="Your Phone">
-                  <label for="userPhone" class="field-label">Phone</label>
-                </div>
-              </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-field">
+        <input type="text" name="name" class="form-input" id="userName" placeholder="Your Name" required>
+        <label for="userName" class="field-label">Name</label>
+      </div>
+    </div>
 
-              <div class="col-md-6">
-                <div class="form-field">
-                  <input type="text" class="form-input" name="subject" id="messageSubject" placeholder="Subject" required="">
-                  <label for="messageSubject" class="field-label">Subject</label>
-                </div>
-              </div>
-            </div>
+    <div class="col-md-6">
+      <div class="form-field">
+        <input type="email" name="email" class="form-input" id="userEmail" placeholder="Your Email" required>
+        <label for="userEmail" class="field-label">Email</label>
+      </div>
+    </div>
+  </div>
 
-            <div class="form-field message-field">
-              <textarea class="form-input message-input" name="message" id="userMessage" rows="5" placeholder="Tell us about your safari plans" required=""></textarea>
-              <label for="userMessage" class="field-label">Message</label>
-            </div>
-			<input type="text" name="_honey" style="display: none;">
-			<input type="hidden" name="_captcha" value="false">
-            <div class="my-3">
-				<!-- <input type="hidden" name="_next" value="https://moeriyaad.github.io/KurgerSaffari/success.html"> -->
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-field">
+        <input type="tel" name="phone" class="form-input" id="userPhone" placeholder="Your Phone">
+        <label for="userPhone" class="field-label">Phone</label>
+      </div>
+    </div>
 
-            <button type="submit" class="send-button">
-              Send Message
-              <span class="button-arrow">→</span>
-            </button>
-          </form>
+    <div class="col-md-6">
+      <div class="form-field">
+        <input type="text" name="subject" class="form-input" id="messageSubject" placeholder="Subject" required>
+        <label for="messageSubject" class="field-label">Subject</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-field message-field">
+    <textarea name="message" class="form-input message-input" id="userMessage" rows="5" placeholder="Tell us about your safari plans" required></textarea>
+    <label for="userMessage" class="field-label">Message</label>
+  </div>
+
+  <!-- Feedback Messages -->
+  <div class="my-3">
+    <div class="loading">Loading</div>
+    <div class="error-message">Something went wrong, please try again.</div>
+    <div class="sent-message">Your message has been sent. Thank you!</div>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit" class="send-button">
+    Send Message <span class="button-arrow">→</span>
+  </button>
+</form>
+
         </div>
       </div>
 
