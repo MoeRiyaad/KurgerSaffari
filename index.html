@@ -1260,6 +1260,7 @@
           </div>
 
           <form action="https://formsubmit.co/543d9a3c5920b48f91375de32c3605ed" method="POST" class="php-email-form contact-form">
+		  <input type="hidden" name="_next" value="https://moeriyaad.github.io/KurgerSaffari/?success#contact">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-field">
@@ -1299,7 +1300,7 @@
 			<input type="text" name="_honey" style="display: none;">
 			<input type="hidden" name="_captcha" value="false">
             <div class="my-3">
-				<input type="hidden" name="_next" value="https://moeriyaad.github.io/KurgerSaffari/success.html">
+				<!-- <input type="hidden" name="_next" value="https://moeriyaad.github.io/KurgerSaffari/success.html"> -->
               <div class="loading">Loading</div>
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
@@ -1383,7 +1384,10 @@
       </div>
     </div>
   </div>
-</section><!-- /Contact Section -->  </main>
+</section><!-- /Contact Section -->  
+
+
+</main>
 
 <footer id="footer" class="footer dark-background">
 
@@ -1509,7 +1513,30 @@
   </div>
 
 </footer>  <!-- Scroll Top -->
- 
+
+ <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector(".php-email-form");
+  const loading = form.querySelector(".loading");
+  const errorMessage = form.querySelector(".error-message");
+  const sentMessage = form.querySelector(".sent-message");
+
+  form.addEventListener("submit", function() {
+    loading.classList.add("d-block");
+  });
+
+  // After redirect back from FormSubmit
+  const params = new URLSearchParams(window.location.search);
+  if (params.has("success")) {
+    loading.classList.remove("d-block");
+    sentMessage.classList.add("d-block");
+  }
+  if (params.has("error")) {
+    loading.classList.remove("d-block");
+    errorMessage.classList.add("d-block");
+  }
+});
+</script>
 
  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
