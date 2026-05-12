@@ -167,12 +167,19 @@ h6 {
   margin-right: 10px;
 }
 
-.header .top-row .logo .sitename {
-  font-size: 28px;
-  font-weight: 400;
-  color: var(--heading-color);
-  font-family: var(--heading-font);
-  margin: 0;
+.header .top-row .logo .sitename img {
+  /* 1. Enlarge the image */
+  width: 65px;  /* Adjust this to your preferred size */
+  height: 65px; /* Keeping width and height the same makes it a perfect square */
+  
+  /* 2. Create the rounded square look */
+  border-radius: 12px; /* Adjust this: higher = rounder, lower = sharper */
+  
+  /* 3. Make sure the image fills the square properly */
+  object-fit: cover;
+  
+  /* Optional: keeps the logo crisp */
+  display: block; 
 }
 
 .header .social-links a {
